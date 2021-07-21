@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace Application_Library
@@ -12,7 +13,7 @@ namespace Application_Library
 
         public string SenderUserCode { set; get; }
 
-        public string RecipientUsername { get; set; }
+        public List<string> RecipientUsername { get; set; }
 
         public string RecipientDisplayName { get; set; }
 

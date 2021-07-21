@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using Application_Library;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace Application_Library
+namespace Chat_Application_Library
 {
     [XmlRoot("Message")]
-    public class FriendListResponseMessage : Message
+    public class FriendListResponse : Message
     {
         [XmlElement("Result")]
         public Result Result { get; set; }
@@ -12,7 +13,7 @@ namespace Application_Library
         [XmlElement("Info")]
         public List<UserInfo> FriendList { get; set; }
 
-        public FriendListResponseMessage()
+        public FriendListResponse()
         {
             Type = Type.Response;
             Action = "FriendList";

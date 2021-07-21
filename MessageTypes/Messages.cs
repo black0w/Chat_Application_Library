@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace Application_Library
+namespace Chat_Application_Library
 {
     /*
       *  <Message type='Request' action='HeartBeat' id='0001'>
