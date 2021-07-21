@@ -13,7 +13,7 @@ namespace Application_Library
 
         public LoginRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "Login";
         }
     }

@@ -15,7 +15,7 @@ namespace Application_Library
 
         public FileDownloadResponseMessage()
         {
-            Type = MessageType.Response;
+            Type = Type.Response;
             Action = "FileDownload";
         }
 

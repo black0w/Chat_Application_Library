@@ -12,7 +12,7 @@ namespace Application_Library
 
         public PingResponseMessage()
         {
-            Type = MessageType.Response;
+            Type = Type.Response;
             Action = "Ping";
         }
     }

@@ -17,7 +17,7 @@ namespace Application_Library
         public bool Status { get; set; }
         public FriendStatusResponseMessage()
         {
-            Type = MessageType.Response;
+            Type = Type.Response;
             Action = "Status";
         }
 
@@ -34,7 +34,7 @@ namespace Application_Library
 
         public FriendStatusRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "Status";
         }
 

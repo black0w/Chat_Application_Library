@@ -162,7 +162,7 @@ namespace Application_Library
 
 
         protected abstract TParam Deserialize<TParam>(TMessageType message);
-        protected abstract object Deserialize(Type paramType, TMessageType message);
+        protected abstract object Deserialize(System.Type paramType, TMessageType message);
 
         protected abstract TMessageType Serialize<T>(T instance);
 

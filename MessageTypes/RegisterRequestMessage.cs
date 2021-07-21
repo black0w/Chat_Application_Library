@@ -16,7 +16,7 @@ namespace Application_Library
 
         public RegisterRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "Register";
         }
     }

@@ -14,7 +14,7 @@ namespace Application_Library
 
         public LoginResponseMessage()
         {
-            Type = MessageType.Response;
+            Type = Type.Response;
             Action = "Login";
         }
 

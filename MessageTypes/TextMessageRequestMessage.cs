@@ -22,7 +22,7 @@ namespace Application_Library
 
         public TextMessageRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "TextMessage";
         }
     }

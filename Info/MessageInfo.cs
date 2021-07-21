@@ -20,7 +20,7 @@ namespace Application_Library
 
         public DateTime TimeStamp { get; set; }
 
-        public Type messageType { get; set; }
+        public InfoType messageType { get; set; }
 
         public string fileContent { get; set; }
 

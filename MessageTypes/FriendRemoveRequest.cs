@@ -16,7 +16,7 @@ namespace Application_Library
         public string userCode { get; set; }
         public FriendRemoveRequest()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "FriendRemove";
         }
 

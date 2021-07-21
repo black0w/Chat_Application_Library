@@ -17,7 +17,7 @@ namespace Application_Library
 
         public MessageDeleteRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "MessageDelete";
         }
     }

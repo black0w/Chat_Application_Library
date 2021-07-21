@@ -12,7 +12,7 @@ namespace Application_Library
 
             public DisplayNameChangeRequestMessage()
             {
-                Type = MessageType.Request;
+                Type = Type.Request;
                 Action = "DisplayNameChange";
             }
         }

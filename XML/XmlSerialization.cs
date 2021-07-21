@@ -8,7 +8,7 @@ namespace Application_Library
     public static class XmlSerialization
     {
         public static XDocument Serialize<T>(T instance) => Serialize(typeof(T), instance);
-        public static XDocument Serialize(Type targetType, object instance)
+        public static XDocument Serialize(System.Type targetType, object instance)
         {
             using (var ms = new MemoryStream())
             {
@@ -22,7 +22,7 @@ namespace Application_Library
         }
 
         public static T Deserialize<T>(XDocument xml) => (T)Deserialize(typeof(T), xml);
-        public static object Deserialize(Type targetType, XDocument xml) => new XmlSerializer(targetType).Deserialize(new StringReader(xml.ToString()));
+        public static object Deserialize(System.Type targetType, XDocument xml) => new XmlSerializer(targetType).Deserialize(new StringReader(xml.ToString()));
 
     }
 }

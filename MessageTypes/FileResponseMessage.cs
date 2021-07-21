@@ -22,7 +22,7 @@ namespace Application_Library
 
         public FileResponseMessage()
         {
-            Type = MessageType.Response;
+            Type = Type.Response;
             Action = "File";
         }
 

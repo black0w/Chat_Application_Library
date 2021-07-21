@@ -15,7 +15,7 @@ namespace Application_Library
 
         public FriendRequestsListResponseMessage()
         {
-            Type = MessageType.Response;
+            Type = Type.Response;
             Action = "FriendRequestsList";
         }
 

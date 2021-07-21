@@ -13,7 +13,7 @@ namespace Application_Library
 
         public FriendInviteRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "FriendInvite";
         }
     }

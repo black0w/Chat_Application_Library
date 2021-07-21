@@ -15,7 +15,7 @@ namespace Application_Library
 
         public ChatResponseMessage()
         {
-            Type = MessageType.Response;
+            Type = Type.Response;
             Action = "Chat";
         }
 

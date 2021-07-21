@@ -13,7 +13,7 @@ namespace Application_Library
 
         public ChatRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "Chat";
         }
     }

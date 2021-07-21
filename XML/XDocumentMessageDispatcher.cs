@@ -18,7 +18,7 @@ namespace Application_Library
         protected override XDocument Serialize<T>(T instance)
             => XmlSerialization.Serialize(instance);
 
-        protected override object Deserialize(Type paramType, XDocument message)
+        protected override object Deserialize(System.Type paramType, XDocument message)
             => XmlSerialization.Deserialize(paramType, message);
     }
 }

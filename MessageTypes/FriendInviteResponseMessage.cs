@@ -12,7 +12,7 @@ namespace Application_Library
 
         public FriendInviteResponseMessage()
         {
-            Type = MessageType.Response;
+            Type = Type.Response;
             Action = "FriendInvite";
         }
 

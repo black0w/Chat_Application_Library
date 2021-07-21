@@ -7,7 +7,7 @@ namespace Application_Library
     {
         public PingRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "Ping";
         }
     }

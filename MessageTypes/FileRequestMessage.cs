@@ -16,13 +16,13 @@ namespace Application_Library
 
         public byte[] fileContent { get; set; }
 
-        public Type messageType { get; set; }
+        public InfoType messageType { get; set; }
 
         public DateTime timeStamp { get; set; }
 
         public FileRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "File";
         }
     }

@@ -22,7 +22,7 @@ namespace Application_Library
         public DateTime timeStamp { get; set; }
         public FileDownloadRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Application_Library.Type.Request;
             Action = "FileDownload";
         }
     }

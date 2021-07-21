@@ -10,7 +10,7 @@ namespace Application_Library
        
         public FriendListRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "FriendList";
         }
     }

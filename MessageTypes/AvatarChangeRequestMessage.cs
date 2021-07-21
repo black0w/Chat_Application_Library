@@ -11,7 +11,7 @@ namespace Application_Library
 
         public AvatarChangeRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "AvatarChange";
         }
     }

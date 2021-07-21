@@ -14,7 +14,7 @@ namespace Application_Library
       * 
       */
 
-    public enum MessageType
+    public enum Type
     {
         Request,
         MessageRequest,
@@ -37,7 +37,7 @@ namespace Application_Library
         public string Id { get; set; }
 
         [XmlAttribute("type")]
-        public MessageType Type { get; set; }
+        public Type Type { get; set; }
 
         [XmlAttribute("action")]
         public string Action { get; set; }

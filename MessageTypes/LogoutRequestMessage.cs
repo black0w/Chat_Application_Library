@@ -9,7 +9,7 @@ namespace Application_Library
 
         public LogoutRequestMessage()
         {
-            Type = MessageType.Request;
+            Type = Type.Request;
             Action = "Logout";
         }
     }
