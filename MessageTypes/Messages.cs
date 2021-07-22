@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using Newtonsoft.Json;
+using System.Xml.Serialization;
 
 namespace Chat_Application_Library
 {
@@ -34,30 +35,37 @@ namespace Chat_Application_Library
     public abstract class Message
     {
         [XmlAttribute("id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
         [XmlAttribute("type")]
+        [JsonProperty("type")]
         public Type Type { get; set; }
 
         [XmlAttribute("action")]
+        [JsonProperty("action")]
         public string Action { get; set; }
 
         [XmlElement("Client")]
+        [JsonProperty("Client")]
         public ClientData clientData { get; set; }
     }
 
     public class ClientData
     {
         [XmlAttribute("id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
         [XmlAttribute("username")]
+        [JsonProperty("username")]
         public string Username { get; set; }
     }
 
     public class Result
     {
         [XmlAttribute("status")]
+        [JsonProperty("status")]
         public Status Status { get; set; }
     }
 }
