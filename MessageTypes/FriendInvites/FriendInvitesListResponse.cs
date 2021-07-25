@@ -6,11 +6,8 @@ using System.Xml.Serialization;
 
 namespace Chat_Application_Library
 {
-    [XmlRoot("Message")]
     public class FriendInvitesListResponse : Message
     {
-   
-        [XmlElement("Info")]
         public List<UserInfo> FriendRequestsList { get; set; }
 
         public FriendInvitesListResponse()

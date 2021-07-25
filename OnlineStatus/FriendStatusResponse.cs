@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Xml.Serialization;
 
 namespace Chat_Application_Library
 {
-    public class FriendInviteResultResponse : Message
+    public class FriendStatusResponse : Message
     {
-
         public Result Result { get; set; }
 
         public string DisplayName { get; set; }
 
         public string UserCode { get; set; }
 
-        public FriendInviteResultResponse()
+        public bool Status { get; set; }
+        public FriendStatusResponse()
         {
             Type = Type.Response;
-            Action = "FriendInviteResult";
+            Action = "Status";
         }
     }
 }

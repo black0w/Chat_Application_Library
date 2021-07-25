@@ -2,7 +2,6 @@
 
 namespace Chat_Application_Library
 {
-    [XmlRoot("Message")]
     public class RegisterRequest : Message
     {
         public string Username { get; set; }
