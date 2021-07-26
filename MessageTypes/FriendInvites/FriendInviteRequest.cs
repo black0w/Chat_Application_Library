@@ -7,7 +7,6 @@ namespace Chat_Application_Library
 {
    public class FriendInviteRequest : Message
     {
-        public string SenderUsername { get; set; }
         public string SenderDisplayName { get; set; }
         public string SenderUserCode { get; set; }
         public string SenderAvatar { get; set; }

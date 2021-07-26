@@ -14,7 +14,7 @@ namespace Application_Library
         readonly ConcurrentDictionary<Guid, IChannel> _channels = new ConcurrentDictionary<Guid, IChannel>();
         readonly Func<IChannel> _channelFactory;
         
-        const int GROOMING_INTERVAL_MINUTES = 4;
+        const int GROOMING_INTERVAL_MINUTES = 2;
 
        private readonly Timer _groomer = new Timer(GROOMING_INTERVAL_MINUTES * 60 * 1000);
 
