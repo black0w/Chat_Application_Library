@@ -23,5 +23,7 @@ namespace Application_Library
         public List<UserInfo> FriendList { get; set; }
 
         public List<UserInfo> FriendRequestsList { get; set; }
+
+        public List<int> GroupIds { get; set; }
     }
 }
