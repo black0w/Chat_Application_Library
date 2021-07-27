@@ -6,11 +6,11 @@ namespace Chat_Application_Library
 {
    public class GroupChatResponse : Message
     {
-        List<int> GroupIds { get; set; }
+        List<GroupInfo> Groups { get; set; }
         public GroupChatResponse()
         {
             Type = Type.Response;
-            Action = "GroupChat";
+            Action = "GroupList";
         }
     }
 }
