@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chat_Application_Library;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -19,11 +20,12 @@ namespace Application_Library
         public string Password { get; set; }
 
         public bool IsOnline { get; set; }
-        
+
         public List<UserInfo> FriendList { get; set; }
 
         public List<UserInfo> FriendRequestsList { get; set; }
 
         public List<int> GroupIds { get; set; }
+        public List<GroupInfo> Groups {get;set;}
     }
 }
