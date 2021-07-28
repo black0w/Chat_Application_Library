@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Chat_Application_Library
 {
-   public class GroupChatResponse : Message
+    public class GroupListResponse : Message
     {
-        List<GroupInfo> Groups { get; set; }
-        public GroupChatResponse()
+        public List<GroupInfo> Groups { get; set; }
+        public GroupListResponse()
         {
             Type = Type.Response;
             Action = "GroupList";
