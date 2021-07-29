@@ -19,6 +19,8 @@ namespace Application_Library
 
         public string Password { get; set; }
 
+        public int GroupId { get; set; }
+
         public bool IsOnline { get; set; }
 
         public List<UserInfo> FriendList { get; set; }
@@ -26,6 +28,6 @@ namespace Application_Library
         public List<UserInfo> FriendRequestsList { get; set; }
 
         public List<int> GroupIds { get; set; }
-        public List<GroupInfo> Groups {get;set;}
+        public List<GroupInfo> Groups { get; set; }
     }
 }
