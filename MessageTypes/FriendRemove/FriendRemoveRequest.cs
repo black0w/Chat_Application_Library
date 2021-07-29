@@ -7,7 +7,6 @@ namespace Chat_Application_Library
         public string Username { get; set; }
         public string DisplayName { get; set; }
         public string UserCode { get; set; }
-        public string Avatar { get; set; }
         public int GroupID { get; set; }
         public FriendRemoveRequest()
         {
