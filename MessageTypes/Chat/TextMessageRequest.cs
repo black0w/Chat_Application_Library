@@ -13,6 +13,7 @@ namespace Chat_Application_Library
         public string RecipientDisplayName { get; set; }
 
         public string ReciepientUserCode { get; set; }
+        public string Avatar { get; set; }
 
         public int GroupID { get; set; }
 
