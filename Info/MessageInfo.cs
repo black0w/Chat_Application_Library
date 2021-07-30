@@ -9,7 +9,7 @@ namespace Application_Library
         public string SenderDisplayName { get; set; }
         public string SenderUserCode { set; get; }
         public DateTime TimeStamp { get; set; }
-        public string Avatar { get; set; }
+        public string SenderAvatar { get; set; }
         public InfoType messageType { get; set; }
         public string fileContent { get; set; }
         public string Content { get; set; }
