@@ -3,18 +3,6 @@ using System.Xml.Serialization;
 
 namespace Chat_Application_Library
 {
-    /*
-      *  <Message type='Request' action='HeartBeat' id='0001'>
-      *    <POS id='POS_001'/>
-      *  </Message>
-      * 
-      * <Message type='Response' action='HeartBeat' id='0001'>
-      *   <POS id='POS_001'/> 
-      *   <Result status='Success'/>
-      * </Message>
-      * 
-      */
-
     public enum Type
     {
         Request,
@@ -36,36 +24,36 @@ namespace Chat_Application_Library
     {
         [JsonProperty("id")]
         [XmlAttribute("id")]
-        public string Id { get; set; }
+        public string Id              { get; set; }
 
         [JsonProperty("type")]
         [XmlAttribute("type")]
-        public Type Type { get; set; }
+        public Type Type              { get; set; }
 
         [JsonProperty("action")]
         [XmlAttribute("action")]
-        public string Action { get; set; }
+        public string Action          { get; set; }
 
         [JsonProperty("Client")]
         [XmlElement("Client")]
-        public ClientData clientData { get; set; }
+        public ClientData clientData  { get; set; }
     }
 
     public class ClientData
     {
         [JsonProperty("id")]
         [XmlAttribute("id")]
-        public string Id { get; set; }
+        public string Id              { get; set; }
 
         [JsonProperty("username")]
         [XmlAttribute("username")]
-        public string Username { get; set; }
+        public string Username        { get; set; }
     }
 
     public class Result
     {
         [JsonProperty("status")]
         [XmlAttribute("status")]
-        public Status Status { get; set; }
+        public Status Status          { get; set; }
     }
 }

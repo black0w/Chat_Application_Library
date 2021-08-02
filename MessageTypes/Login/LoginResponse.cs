@@ -6,9 +6,9 @@ namespace Chat_Application_Library
     [XmlRoot("Message")]
     public class LoginResponse : Message
     {
-        public Result Result { get; set; }
+        public Result Result        { get; set; }
 
-        public UserInfo userInfo { get; set; }
+        public UserInfo userInfo    { get; set; }
 
         public LoginResponse()
         {
