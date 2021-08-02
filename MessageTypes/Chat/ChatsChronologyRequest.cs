@@ -1,17 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Xml.Serialization;
 
 namespace Chat_Application_Library
 {
     [XmlRoot("Message")]
-    public class Ping : Message
+    public class ChatsChronologyRequest : Message
     {
-        public Ping()
+        public int GroupId { get; set; }
+
+        public ChatsChronologyRequest()
         {
             Type = Type.Request;
-            Action = "Ping";
+            Action = "ChatChronology";
         }
     }
 }

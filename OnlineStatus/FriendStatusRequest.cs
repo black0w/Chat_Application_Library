@@ -1,5 +1,8 @@
-﻿namespace Chat_Application_Library
+﻿using System.Xml.Serialization;
+
+namespace Chat_Application_Library
 {
+    [XmlRoot("Message")]
     public class FriendStatusRequest : Message
     {
         public Result Result { get; set; }

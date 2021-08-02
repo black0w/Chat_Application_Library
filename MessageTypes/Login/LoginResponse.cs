@@ -3,6 +3,7 @@ using System.Xml.Serialization;
 
 namespace Chat_Application_Library
 {
+    [XmlRoot("Message")]
     public class LoginResponse : Message
     {
         public Result Result { get; set; }

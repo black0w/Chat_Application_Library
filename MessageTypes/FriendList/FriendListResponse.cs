@@ -4,6 +4,7 @@ using System.Xml.Serialization;
 
 namespace Chat_Application_Library
 {
+    [XmlRoot("Message")]
     public class FriendListResponse : Message
     {
         public Result Result { get; set; }

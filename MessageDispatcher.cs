@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Application_Library
 {
@@ -16,6 +17,7 @@ namespace Application_Library
             where TProtocol : Protocol<TMessageType>, new()
             => channel.OnMessage(async message =>
             {
+        
                 var response = await DispatchAsync(channel, message).ConfigureAwait(false);
                 if (response != null)
                 {

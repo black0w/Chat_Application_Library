@@ -67,6 +67,7 @@ namespace Application_Library
                 while (!_cancellationTokenSource.Token.IsCancellationRequested)
                 {
                     //TODO: Pass Cancellation Token to Protocol methods
+                   
                     var msg = await _protocol.ReceiveAsync(_networkStream).ConfigureAwait(false);
                     LastReceived = DateTime.UtcNow;
                     await _messageCallback(msg).ConfigureAwait(false);

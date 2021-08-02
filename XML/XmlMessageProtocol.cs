@@ -13,6 +13,7 @@ namespace Application_Library
             var xmlData = Encoding.UTF8.GetString(message);
             //Console.WriteLine(xmlData);
             var xmlReader = XmlReader.Create(new StringReader(xmlData), new XmlReaderSettings { DtdProcessing = DtdProcessing.Ignore });
+            Console.WriteLine(xmlReader.ToString());
             return XDocument.Load(xmlReader);
         }
 

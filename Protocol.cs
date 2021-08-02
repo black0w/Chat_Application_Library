@@ -23,9 +23,14 @@ namespace Application_Library
             var data = new byte[header.Length + body.Length];
             Buffer.BlockCopy(src: header, 0, dst: data, 0, header.Length);
             Buffer.BlockCopy(src: body, 0, dst: data, header.Length, body.Length);
-
-            await networkStream.WriteAsync(data, 0, data.Length);
-        }
+            try {
+                await networkStream.WriteAsync(data, 0, data.Length);
+            }
+            catch (NullReferenceException)
+            {
+                throw new Exception("No connection to server");
+            }
+            }
 
         async Task<int> ReadHeader(NetworkStream networkStream)
         {

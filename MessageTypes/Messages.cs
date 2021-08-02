@@ -35,30 +35,37 @@ namespace Chat_Application_Library
     public abstract class Message
     {
         [JsonProperty("id")]
+        [XmlAttribute("id")]
         public string Id { get; set; }
 
         [JsonProperty("type")]
+        [XmlAttribute("type")]
         public Type Type { get; set; }
 
         [JsonProperty("action")]
+        [XmlAttribute("action")]
         public string Action { get; set; }
 
         [JsonProperty("Client")]
+        [XmlElement("Client")]
         public ClientData clientData { get; set; }
     }
 
     public class ClientData
     {
         [JsonProperty("id")]
+        [XmlAttribute("id")]
         public string Id { get; set; }
 
         [JsonProperty("username")]
+        [XmlAttribute("username")]
         public string Username { get; set; }
     }
 
     public class Result
     {
         [JsonProperty("status")]
+        [XmlAttribute("status")]
         public Status Status { get; set; }
     }
 }

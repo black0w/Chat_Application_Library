@@ -5,7 +5,8 @@ using System.Xml.Serialization;
 
 namespace Chat_Application_Library
 {
-   public class FriendInviteRequest : Message
+    [XmlRoot("Message")]
+    public class FriendInviteRequest : Message
     {
         public string SenderUsername { get; set; }
         public string SenderDisplayName { get; set; }
