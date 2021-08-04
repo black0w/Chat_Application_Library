@@ -15,7 +15,6 @@ namespace Chat_Application_Library
         public string DisplayName { get; set; }
 
         public string UserCode { get; set; }
-        public string Avatar { get; set; }
 
         public FriendInviteAnswerResponse()
         {

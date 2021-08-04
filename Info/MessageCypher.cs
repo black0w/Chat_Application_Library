@@ -9,17 +9,9 @@ namespace Application_Library
 {
    public class MessageCypher
     {
-        //While an app specific salt is not the best practice for
-        //password based encryption, it's probably safe enough as long as
-        //it is truly uncommon. Also too much work to alter this answer otherwise.
+      
         private static byte[] _salt = new byte[52152];
 
-        /// <summary>
-        /// Encrypt the given string using AES.  The string can be decrypted using 
-        /// DecryptStringAES().  The sharedSecret parameters must match.
-        /// </summary>
-        /// <param name="plainText">The text to encrypt.</param>
-        /// <param name="sharedSecret">A password used to generate a key for encryption.</param>
         public static string EncryptStringAES(string plainText, string sharedSecret)
         {
             if (string.IsNullOrEmpty(plainText))
@@ -70,12 +62,7 @@ namespace Application_Library
             return outStr;
         }
 
-        /// <summary>
-        /// Decrypt the given string.  Assumes the string was encrypted using 
-        /// EncryptStringAES(), using an identical sharedSecret.
-        /// </summary>
-        /// <param name="cipherText">The text to decrypt.</param>
-        /// <param name="sharedSecret">A password used to generate a key for decryption.</param>
+       
         public static string DecryptStringAES(string cipherText, string sharedSecret)
         {
             if (string.IsNullOrEmpty(cipherText))

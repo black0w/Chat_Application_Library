@@ -7,32 +7,37 @@ namespace Application_Library
 {
     public class WriteToDebugFile
     {
-
         public static void WriteToFile(string msg)
         {
-            string filePath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}\ServerStorage\Debug";
+            string filePath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}\ServerLogging\Log";
             Directory.CreateDirectory(filePath);
+
+            //Проверяване на файла дали съществува в дадената директория
             if (!File.Exists(filePath + @"\debug.txt"))
             {
-                // Create a file to write to.
-                using (StreamWriter sw = File.CreateText(filePath + @"\debug.txt"))
+                // Създаване на файл
+                using (StreamWriter sw = File.CreateText(filePath + @"\Log.txt"))
                 {
                     sw.WriteLine($"({DateTime.Now})>> {msg}");
-                    sw.Close();
                 }
+                return;
             }
 
-            // This text is always added, making the file longer over time
-            // if it is not deleted.
+            // Текстът се добавя в края на файла
+            // Файлът ще става с по-големи размери
+            // с всяко добавяне на текст, освен
+            // ако не се прочиства на определено време.
             try
             {
-                using (StreamWriter sw = File.AppendText(filePath + @"\debug.txt"))
+                using (StreamWriter sw = File.AppendText(filePath + @"\Log.txt"))
                 {
                     sw.WriteLine($"({DateTime.Now})>> {msg}");
-                    sw.Close();
                 }
             }
-            catch (IOException) { Console.WriteLine($"({DateTime.Now})>> Cannot write to debug.txt , file is used by another procces"); }
+            catch (IOException)
+            {
+                Console.WriteLine($"({DateTime.Now})>> Cannot write to debug.txt , file is used by another procces");
+            }
         }
     }
 }

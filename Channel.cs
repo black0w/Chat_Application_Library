@@ -47,7 +47,11 @@ namespace Application_Library
                 _isClosed = true;
                 _cancellationTokenSource.Cancel();
                 _networkStream?.Close();
-                _receiveLoopTask.Wait();
+                try
+                {
+                    _receiveLoopTask.Wait();
+                }
+                catch (NullReferenceException) { }
                 Closed?.Invoke(this, EventArgs.Empty);
             }
         }
