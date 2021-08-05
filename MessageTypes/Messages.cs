@@ -19,6 +19,14 @@ namespace Chat_Application_Library
         Decline
     }
 
+    public enum UpdateType
+    {
+        DISPLAY_NAME,
+        PASSWORD,
+        AVATAR,
+        EMAIL
+    }
+
     [XmlRoot("Message")]
     public abstract class Message
     {
