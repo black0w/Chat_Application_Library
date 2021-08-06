@@ -19,12 +19,18 @@ namespace Chat_Application_Library
         Decline
     }
 
-    public enum UpdateType
+    //public enum UpdateType
+    //{
+    //    DISPLAY_NAME,
+    //    PASSWORD,
+    //    AVATAR,
+    //    EMAIL
+    //}
+
+    public enum ErrorType
     {
-        DISPLAY_NAME,
-        PASSWORD,
-        AVATAR,
-        EMAIL
+        NONE,
+        PASSWORD
     }
 
     [XmlRoot("Message")]
@@ -63,5 +69,12 @@ namespace Chat_Application_Library
         [JsonProperty("status")]
         [XmlAttribute("status")]
         public Status Status          { get; set; }
+    }
+
+    public class Error
+    {
+        [JsonProperty("error")]
+        [XmlAttribute("error")]
+        public ErrorType ErrorType    { get; set; }
     }
 }
