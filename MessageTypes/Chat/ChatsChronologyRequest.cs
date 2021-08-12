@@ -8,7 +8,6 @@ namespace Chat_Application_Library
     public class ChatsChronologyRequest : Message
     {
         public int GroupId { get; set; }
-
         public ChatsChronologyRequest()
         {
             Type = Type.Request;

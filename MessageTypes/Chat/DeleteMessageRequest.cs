@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Application_Library;
+using System;
 using System.Xml.Serialization;
 
 namespace Chat_Application_Library
 {
     [XmlRoot("Message")]
-    public class DeleteTextMessageRequest : Message
+    public class DeleteMessageRequest : Message
     {
         public string SenderDisplayName { get; set; }
         public string SenderUserCode { get; set; }
@@ -12,10 +13,12 @@ namespace Chat_Application_Library
         public string Content { get; set; }
         public DateTime TimeStamp { get; set; }
 
-        public DeleteTextMessageRequest()
+        public InfoType MessageType { get; set; }
+
+        public DeleteMessageRequest()
         {
             Type = Type.Request;
-            Action = "TextMessageDelete";
+            Action = "MessageDelete";
         }
     }
 }

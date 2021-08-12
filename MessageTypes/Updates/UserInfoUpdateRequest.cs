@@ -42,4 +42,16 @@ namespace Chat_Application_Library
             Action = "FriendAvatarUpdate";
         }
     }
+
+    public class FriendDisplayNameUpdateResponse : Message
+    {
+        public string OldDisplayName { get; set; }
+        public string DisplayName { get; set; }
+        public string UserCode { get; set; }
+        public FriendDisplayNameUpdateResponse()
+        {
+            Type = Type.Response;
+            Action = "FriendDisplayNameUpdate";
+        }
+    }
 }

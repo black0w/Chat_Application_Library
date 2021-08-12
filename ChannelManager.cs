@@ -54,6 +54,7 @@ namespace Application_Library
                     var c = _channels[k];
                     c.Dispose();
                     socketsGroomed++;
+                    _channels.TryRemove(k, out _);
                 }
 
             }
